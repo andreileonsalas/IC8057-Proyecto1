@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text 
+        {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;            
+            font-size: 1.5em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .text:hover
+        {
+            display: block;
+        }
+
+        .info
+        {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Polen</h1>
+        <p class="text">
+            Está compuesto por un grupo de granos de color amarillo que hacen posible la reproducción de las plantas con semillas. El polen de una flor debe llegar a otra, por medio del viento u otros organismos para fecundarla. A este proceso se le llama polinización.
+        </p>
+    </div>
+    <div class="info">
+        <h1>Néctar</h1>
+        <p class="text">
+            Esta sustancia dulce atrae a organismos como abejas. De hecho, es su materia prima para producir miel.
+        </p>
+    </div>
+    <div class="info">
+        <h1>Atracción</h1>
+        <p class="text">
+            El aroma que produce la flor, son herramientas que utilizan algunas flores para decirles a los polinizadores: "hey! ven, que estoy bien sabrosa".
+        </p>
+    </div>
+</body>
+</html>
