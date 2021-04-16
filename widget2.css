@@ -1,0 +1,49 @@
+#Coche
+{
+    display:none;
+}
+
+#Avion
+{
+    display:none;
+}
+
+#Tren
+{
+    display:none;
+}
+
+#CocheOpcion:checked ~ #Coche
+{
+    display: flex;
+    background-color: blue;
+    color: white;
+}
+
+#AvionOpcion:checked ~ #Avion
+{
+    display: flex;
+    background-color: brown;
+    color: white;
+}
+
+#TrenOpcion:checked ~ #Tren
+{
+    display: flex;
+    background-color: chocolate;
+    color: white;
+}
+
+input[name="Tranporte"]{
+    float: left;
+}
+
+label{
+    float: left;
+}
+input[type="text"]{
+    margin-left: 100px;
+    margin-top: -40px;
+    height: 200px;
+}
+
