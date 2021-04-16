@@ -61,14 +61,17 @@ body{
 
 /* Modo por selected atributo */
 #CocheOpcion[selected="checked"] ~ #labelCoche{
+    transition-duration: 2s;
     color: red;
 }
 
 #AvionOpcion[selected="checked"] ~ #labelAvion{
+    transition-duration: 2s;
     color: red;
 }
 
 #TrenOpcion[selected="checked"] ~ #labelTren{
+    transition-duration: 2s;
     color: red;
 }
 
