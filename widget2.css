@@ -27,7 +27,7 @@ body{
 
 /* Modo por checkbox */
 
-#CocheOpcion:checked ~ #Coche
+/* #CocheOpcion:checked ~ #Coche
 {
     visibility: visible;
     transition-duration: 2s;
@@ -55,12 +55,12 @@ body{
     background-color: chocolate;
     color: white;
     
-}
+} */
 
 /* Modo por checkbox */
 
 /* Modo por selected atributo */
-/* input[selected="checked"] ~ #Coche
+#CocheOpcion[selected="checked"] ~ #Coche
 {
     visibility: visible;
     transition-duration: 2s;
@@ -70,7 +70,7 @@ body{
     
 }
 
-input[selected="checked"] ~ #Avion
+#AvionOpcion[selected="checked"] ~ #Avion
 {
     visibility: visible;
     transition-duration: 2s;
@@ -80,7 +80,7 @@ input[selected="checked"] ~ #Avion
     
 }
 
-input[selected="checked"] ~ #Avion
+#TrenOpcion[selected="checked"] ~ #Tren
 {
     visibility: visible;
     transition-duration: 2s;
@@ -88,7 +88,7 @@ input[selected="checked"] ~ #Avion
     background-color: chocolate;
     color: white;
     
-} */
+}
 /* Modo por selected atributo */
 
 input[name="Tranporte"]{
