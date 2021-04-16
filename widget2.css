@@ -1,38 +1,92 @@
+body{
+    
+}
 #Coche
 {
-    display:none;
+    position: absolute;
+    
+    visibility: hidden;
+    
 }
 
 #Avion
 {
-    display:none;
+    position: absolute;
+    
+    visibility: hidden;
+    
 }
 
 #Tren
 {
-    display:none;
+    position: absolute;
+    
+    visibility: hidden;
+    
 }
+
+/* Modo por checkbox */
 
 #CocheOpcion:checked ~ #Coche
 {
+    visibility: visible;
+    transition-duration: 2s;
     display: flex;
     background-color: blue;
     color: white;
+    
 }
 
 #AvionOpcion:checked ~ #Avion
 {
+    visibility: visible;
+    transition-duration: 2s;
     display: flex;
     background-color: brown;
     color: white;
+    
 }
 
 #TrenOpcion:checked ~ #Tren
 {
+    visibility: visible;
+    transition-duration: 2s;
     display: flex;
     background-color: chocolate;
     color: white;
+    
 }
+
+/* Modo por checkbox */
+
+/* Modo por selected atributo */
+/* input[selected="checked"] ~ #Coche
+{
+    transition-duration: 2s;
+    display: flex;
+    background-color: blue;
+    color: white;
+    
+}
+
+input[selected="checked"] ~ #Avion
+{
+    transition-duration: 2s;
+    display: flex;
+    background-color: blue;
+    color: white;
+    
+}
+
+input[selected="checked"] ~ #Avion
+{
+    transition-duration: 2s;
+    display: flex;
+    background-color: blue;
+    color: white;
+    
+} */
+/* Modo por selected atributo */
 
 input[name="Tranporte"]{
     float: left;
@@ -42,6 +96,7 @@ label{
     float: left;
 }
 input[type="text"]{
+    
     margin-left: 100px;
     margin-top: -40px;
     height: 200px;
