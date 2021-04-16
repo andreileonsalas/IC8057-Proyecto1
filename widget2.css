@@ -60,6 +60,18 @@ body{
 /* Modo por checkbox */
 
 /* Modo por selected atributo */
+#CocheOpcion[selected="checked"] ~ #labelCoche{
+    color: red;
+}
+
+#AvionOpcion[selected="checked"] ~ #labelAvion{
+    color: red;
+}
+
+#TrenOpcion[selected="checked"] ~ #labelTren{
+    color: red;
+}
+
 #CocheOpcion[selected="checked"] ~ #Coche
 {
     visibility: visible;
@@ -93,6 +105,7 @@ body{
 
 input[name="Tranporte"]{
     float: left;
+    visibility: hidden;
 }
 
 label{
