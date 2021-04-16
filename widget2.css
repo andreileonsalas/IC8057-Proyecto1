@@ -62,6 +62,7 @@ body{
 /* Modo por selected atributo */
 /* input[selected="checked"] ~ #Coche
 {
+    visibility: visible;
     transition-duration: 2s;
     display: flex;
     background-color: blue;
@@ -71,18 +72,20 @@ body{
 
 input[selected="checked"] ~ #Avion
 {
+    visibility: visible;
     transition-duration: 2s;
     display: flex;
-    background-color: blue;
+    background-color: brown;
     color: white;
     
 }
 
 input[selected="checked"] ~ #Avion
 {
+    visibility: visible;
     transition-duration: 2s;
     display: flex;
-    background-color: blue;
+    background-color: chocolate;
     color: white;
     
 } */
