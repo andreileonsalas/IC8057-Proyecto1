@@ -16,15 +16,51 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <script>
-            horas=13
-            minutos=9
-            segundos=0
-            function sumarsegundo(){
-                
-            }
-        </script>
 
+        <!-- CSS boostrap 5 only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+        <script>
+            horas=23
+            minutos=59
+            segundos=55
+            function sumarsegundo(){
+                segundos=segundos+1
+                if (segundos>59)
+                {
+                    segundos = 0
+                    sumarminuto()
+                }
+            }
+            function sumarminuto(){
+                minutos=minutos+1
+                if (minutos>59)
+                {
+                    minutos = 0
+                    sumarhora()
+                }
+            }
+            function sumarhora(){
+                horas=horas+1
+                if (horas>23)
+                {
+                    horas = 0
+                }
+            }
+            function muestrahora()
+            {
+                sumarsegundo()
+                console.log(horas + ':' + minutos + ':' + segundos)
+                document.getElementById('cronometro').innerHTML='El cronometro va asi: ' + horas + ':' + minutos + ':' + segundos
+            }
+            setInterval(muestrahora, 1000);
+
+        </script>
+        <h1>setInterval</h1>
+
+        <p>Pagina que muestra en consola el cambio de hora por segundo con set interval</p>
+        <br><br><br>
+        <h2 id="cronometro">El cronometro va asi: </h2>
 
         <script src="" async defer></script>
     </body>
