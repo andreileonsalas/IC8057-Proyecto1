@@ -53,13 +53,29 @@
                 console.log(horas + ':' + minutos + ':' + segundos)
                 document.getElementById('cronometro').innerHTML='El cronometro va asi: ' + horas + ':' + minutos + ':' + segundos
             }
-            setInterval(muestrahora, 1000);
+            function reiniciar(){
+                horas=0
+                minutos=0
+                segundos=0
+                document.getElementById('cronometro').innerHTML='Se reinicio el cronometro'
+            }
+            function stop(){
+                clearInterval(Cronometro)
+            }
+            function start(){
+                Cronometro = setInterval(muestrahora, 1000);
+            }
+            Cronometro = setInterval(muestrahora, 1000);
 
         </script>
         <h1>setInterval example</h1>
         <p>Pagina que muestra en consola el cambio de hora por segundo con set interval</p>
         <br><br><br>
         <h2 id="cronometro">Cargando cronometro </h2>
+        <br><br><br>
+        <button onclick="reiniciar()">Reiniciar timer</button>
+        <button onclick="stop()">Stop timer</button>
+        <button onclick="start()">Start timer</button>
 
         <script src="" async defer></script>
     </body>
