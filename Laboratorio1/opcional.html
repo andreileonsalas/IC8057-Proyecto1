@@ -17,7 +17,6 @@
 
         .text {
             overflow: hidden;
-            
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -41,21 +40,19 @@
         .info {
             margin-bottom: 50px;
             box-shadow: 5px 10px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: block;
             width: 50%;
             padding: 10px;
             border: 1px solid black;
-            
+
         }
 
 
         .info:hover {
             box-shadow: inset 0 0 10px;
             box-shadow: 5px 10px;
-            
+            position: absolute
+
         }
 
         .info:hover>img {
@@ -65,8 +62,8 @@
             opacity: 1;
             transition-duration: 3s;
             transform-origin: top;
-            transform: scale(1,1);
-            
+            transform: scale(1, 1);
+
 
         }
 
@@ -77,10 +74,17 @@
             opacity: 0;
             transition: visibility 0.3s ease, opacity 0.3s ease max-height 0.3s ease-in;
             transform-origin: top;
-            transform: scale(0,0.1);
+            transform: scale(0, 0.1);
             animation-direction: normal;
             visibility: hidden;
 
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
         }
     </style>
 </head>
@@ -90,33 +94,43 @@
         <h1>Por que las flores tienen su aroma?</h1>
     </header>
     <div class="row">
-        <div class="info">
-            <h1>Polen</h1>
-            <p class="text">
-                Está compuesto por un grupo de granos de color amarillo que hacen posible la reproducción de las plantas
-                con semillas. El polen de una flor debe llegar a otra, por medio del viento u otros organismos para
-                fecundarla. A este proceso se le llama polinización.
-            </p>
-            <img src="polen.png">
+        <div class="column">
+            <div class="info">
+                <h1>Polen</h1>
+                <p class="text">
+                    Está compuesto por un grupo de granos de color amarillo que hacen posible la reproducción de las
+                    plantas
+                    con semillas. El polen de una flor debe llegar a otra, por medio del viento u otros organismos para
+                    fecundarla. A este proceso se le llama polinización.
+                </p>
+                <img src="polen.png">
+            </div>
         </div>
-        <div class="info">
-            <h1>Néctar</h1>
-            <p class="text">
-                Esta sustancia dulce atrae a organismos como abejas. De hecho, es su materia prima para producir miel.
-            </p>
-            <img src="nectar.png">
+        <div class="column">
+            <div class="info">
+                <h1>Néctar</h1>
+                <p class="text">
+                    Esta sustancia dulce atrae a organismos como abejas. De hecho, es su materia prima para producir
+                    miel.
+                </p>
+                <img src="nectar.png">
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="info">
-            <h1>Atracción</h1>
-            <p class="text">
-                El aroma que produce la flor, son herramientas que utilizan algunas flores para decirles a los
-                polinizadores: "hey! ven, que estoy bien sabrosa".
-            </p>
-            <img src="atracción.png">
+        <div class="column">
+            <div class="info">
+                <h1>Atracción</h1>
+                <p class="text">
+                    El aroma que produce la flor, son herramientas que utilizan algunas flores para decirles a los
+                    polinizadores: "hey! ven, que estoy bien sabrosa".
+                </p>
+                <img src="atracción.png">
+            </div>
         </div>
-        <div class="info"></div>
+        <div class="column">
+            <div class="info"></div>
+        </div>
     </div>
 
 
