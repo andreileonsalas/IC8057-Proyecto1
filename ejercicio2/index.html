@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        /* * {
+                color: #33ff00;
+                background-color: black;
+            } */
+        aside {
+            float: right;
+            color: white;
+            background-color: black;
+        }
+
+        main {
+            float: left;
+        }
+
+        .persona{
+            padding: 10px;
+            margin: 20px;
+            color: #33ff00;
+            background-color: black;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <aside>
+        <div id="contenido"></div>
+        <div id="proto"></div>
+        <div id="consola" style="border: 10px; background-color: green;">Menu</div>
+
+        <input type="checkbox" id="mostrarNombres" onclick="actualizarPropiedades()" checked>
+        <label for="mostrarNombres">mostrarNombres</label>
+        <br>
+        <input type="checkbox" id="mostrarApellido" onclick="actualizarPropiedades()">
+        <label for="mostrarApellido">mostrarApellido</label>
+        <br>
+        <input type="checkbox" id="mostrarNumero" onclick="actualizarPropiedades()">
+        <label for="mostrarNumero">mostrarNumero</label>
+        <br>
+        <input type="checkbox" id="mostrarSobrenombre" onclick="actualizarPropiedades()">
+        <label for="mostrarSobrenombre">mostrarSobrenombre</label>
+        <br>
+        <input type="checkbox" id="mostrarColor" onclick="actualizarPropiedades()">
+        <label for="mostrarColor">mostrarColor</label>
+        <br>
+    </aside>
+
+    <main class="main">
+
+    </main>
+
+    <script>
+        proto = document.getElementById('proto')
+        proto.__proto__.nombre = ""
+        proto.__proto__.apellido = ""
+        proto.__proto__.numero = ""
+        proto.__proto__.sobrenombre = ""
+        proto.__proto__.color = ""
+
+        var personas = []
+
+        function crearPersona(params) {
+            persona = document.createElement('DIV')
+            persona.className = 'persona';
+            persona.nombre = params.nombre;
+            persona.apellido = params.apellido;
+            persona.numero = params.numero;
+            persona.sobrenombre = params.sobrenombre;
+            persona.color = params.color;
+            personas.push(persona)
+        }
+
+        function mostrarDatos() {
+            this.innerHTML = ''
+            this.style.display = 'block'
+            if (document.getElementById("mostrarNombres").checked) {
+                this.innerHTML = "nombre:" + this.nombre + "<br> "
+            }
+            if (document.getElementById("mostrarApellido").checked) {
+                this.innerHTML = this.innerHTML + " apellido:" + this.apellido + "<br> "
+            }
+            if (document.getElementById("mostrarNumero").checked) {
+                this.innerHTML = this.innerHTML + " numero:" + this.numero + "<br> "
+            }
+            if (document.getElementById("mostrarSobrenombre").checked) {
+                this.innerHTML = this.innerHTML + " sobrenombre:" + this.sobrenombre + "<br> "
+            }
+            if (document.getElementById("mostrarColor").checked) {
+                this.innerHTML = this.innerHTML + " color:" + this.color + "<br> "
+            }
+            if (this.innerHTML === '') this.style.display = 'none'
+
+        }
+
+        function actualizarPropiedades() {
+            for (let index = 0; index < personas.length; index++) {
+                personas[index].mostrarDatos()
+            }
+        }
+
+        proto.__proto__.mostrarDatos = mostrarDatos
+
+        crearPersona({
+            nombre: 'Andrei',
+            apellido: 'Leon',
+            numero: '86366807',
+            sobrenombre: 'Ark',
+            color: 'Rojo'
+        })
+        crearPersona({
+            nombre: 'p2',
+            apellido: 'p2',
+            numero: 'p2',
+            sobrenombre: 'p2',
+            color: 'p2'
+        })
+        crearPersona({
+            nombre: 'p3',
+            apellido: 'p3',
+            numero: 'p3',
+            sobrenombre: 'p3',
+            color: 'p3'
+        })
+        crearPersona({
+            nombre: 'p4',
+            apellido: 'p4',
+            numero: 'p4',
+            sobrenombre: 'p4',
+            color: 'p4'
+        })
+
+
+        for (let index = 0; index < personas.length; index++) {
+            document.querySelector('body > main').appendChild(personas[index])
+            personas[index].mostrarDatos()
+        }
+    </script>
+</body>
+
+</html>
